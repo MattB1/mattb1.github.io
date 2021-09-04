@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Alex</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h1>Alex Birthday Hunt</h1>
+        <p>Clue:</p>
+        <div id="clue_div">
+            <h2 id="clue_text">Short when old, Tall when young</h2>
+        </div>
+        <div id="clue_hidden">
+            <p style="color: red;">clue hidden</p>
+        </div>
+       
+   
+        <script>
+
+        let clue = document.getElementById("clue_div");
+        clue.style.display = "none";
+        let hidden_div = document.getElementById("clue_hidden");
+        
+        let s = "";
+        s = prompt("please enter the password");
+        if(s == "mirror"){
+            clue.style.display = "block";
+            hidden_div.style.display = "none";
+        }else {
+            alert('Incorrect password-try again');
+        }
+        
+        </script>
+    </body>
+</html>
