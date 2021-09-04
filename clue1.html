@@ -17,8 +17,12 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <h1>Alex Birthday Hunt</h1>
+        <p>Clue:</p>
         <div id="clue_div">
-            <h1 id="clue_text">You did it! Let's get started. What's </h1>
+            <h2 id="clue_text">You did it! Let's get started. What's </h2>
+        </div>
+        <div id="clue_hidden">
+            <p style="color: red;">clue hidden</p>
         </div>
        
         
@@ -28,10 +32,13 @@
         
         let clue = document.getElementById("clue_div");
         clue.style.display = "none";
+        let hidden_div = document.getElementById("clue_hidden");
+        
         let s = "";
         s = prompt("please enter the password");
         if(s == "clean"){
             clue.style.display = "block";
+            hidden_div.style.display = "none";
         }else {
             alert('Incorrect password-try again');
         }
