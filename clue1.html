@@ -19,24 +19,22 @@
         <h1>Alex Birthday Hunt</h1>
         <p>Clue:</p>
         <div id="clue_div">
-            <h2 id="clue_text">You did it! Let's get started. What's </h2>
+            <h2 id="clue_text">You did it! I have many hands that wave at you but never say goodbye. I'm cool to be around espeically when I say 'HI'. What am I? </h2>
         </div>
         <div id="clue_hidden">
             <p style="color: red;">clue hidden</p>
         </div>
        
-        
-        <script src="" async defer></script>
+   
         <script>
 
-        
         let clue = document.getElementById("clue_div");
         clue.style.display = "none";
         let hidden_div = document.getElementById("clue_hidden");
         
         let s = "";
         s = prompt("please enter the password");
-        if(s == "clean"){
+        if(s == "birthday"){
             clue.style.display = "block";
             hidden_div.style.display = "none";
         }else {
