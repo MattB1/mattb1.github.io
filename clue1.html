@@ -16,18 +16,21 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <h1>You did it! Let's get started. What's </h1>
+        <h1 id="clue_text">You did it! Let's get started. What's </h1>
         
         <script src="" async defer></script>
         <script>
 
-            let s = "";
-            s = prompt("please enter the password");
-            if(s == "clean"){
-                window.location.href="clue1.html";
-            }else {
-                alert('Incorrect password-try again');
-            }
+        
+let clue = document.getElementById("clue_text");
+clue.style.display = "none";
+let s = "";
+s = prompt("please enter the password");
+if(s == "clean"){
+    clue.style.display = "block";
+}else {
+    alert('Incorrect password-try again');
+}
         
         </script>
     </body>
