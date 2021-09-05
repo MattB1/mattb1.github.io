@@ -33,14 +33,20 @@
         let hidden_div = document.getElementById("clue_hidden");
         
         let s = "";
-        s = prompt("please enter the password");
-         s = s? s.toLowerCase() : "";      
-        if(s == "candle"){
-            clue.style.display = "block";
-            hidden_div.style.display = "none";
+        
+        while(s != "candle"){
+            s = prompt("please enter the password");
+            s = s? s.toLowerCase() : "";
+        }
+        clue.style.display = "block";
+        hidden_div.style.display = "none";
+
+
+        {% comment %} if(s == "candle"){
+           
         }else {
             alert('Incorrect password-try again');
-        }
+        } {% endcomment %}
         
         </script>
     </body>
