@@ -28,11 +28,25 @@
    
         <script>
 
-        let clue = document.getElementById("clue_div");
+          let clue = document.getElementById("clue_div");
         clue.style.display = "none";
         let hidden_div = document.getElementById("clue_hidden");
         
         let s = "";
+        
+        while(s != "birthday"){
+            s = prompt("please enter the password");
+            s = s? s.toLowerCase() : "";
+        }
+        clue.style.display = "block";
+        hidden_div.style.display = "none";
+
+
+        let clue = document.getElementById("clue_div");
+        clue.style.display = "none";
+        let hidden_div = document.getElementById("clue_hidden");
+        
+        {% comment %} let s = "";
         s = prompt("please enter the password");
         s = s? s.toLowerCase() : "";        
         if(s == "birthday" ){
@@ -40,7 +54,7 @@
             hidden_div.style.display = "none";
         }else {
             alert('Incorrect password-try again');
-        }
+        } {% endcomment %}
         
         </script>
     </body>
