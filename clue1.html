@@ -34,7 +34,8 @@
         
         let s = "";
         s = prompt("please enter the password");
-        if(s == "birthday"){
+        s = s? s.toLowerCase() : "";        
+        if(s == "birthday" ){
             clue.style.display = "block";
             hidden_div.style.display = "none";
         }else {
