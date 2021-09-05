@@ -34,6 +34,7 @@
         
         let s = "";
         s = prompt("please enter the password");
+         s = s? s.toLowerCase() : "";      
         if(s == "mirror"){
             clue.style.display = "block";
             hidden_div.style.display = "none";
