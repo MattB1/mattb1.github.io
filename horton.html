@@ -28,19 +28,21 @@
    
         <script>
 
+
+
         let clue = document.getElementById("clue_div");
         clue.style.display = "none";
         let hidden_div = document.getElementById("clue_hidden");
         
         let s = "";
-        
-        while(s != "candle"){
-            s = prompt("please enter the password");
-            s = s? s.toLowerCase() : "";
+        s = prompt("please enter the password");
+         s = s? s.toLowerCase() : "";      
+        if(s == "candle"){
+            clue.style.display = "block";
+            hidden_div.style.display = "none";
+        }else {
+            alert('Incorrect password-try again');
         }
-        clue.style.display = "block";
-        hidden_div.style.display = "none";
-
 
         {% comment %} if(s == "candle"){
            
