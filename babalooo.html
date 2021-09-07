@@ -34,14 +34,13 @@
             const answer = "fan";
 
             const checkPassword = (password) => {
-                let pw = password? password.toLowerCase(): "";
-                if (pw == answer){
+                let pw = password ? password.toLowerCase() : "";
+                if (pw == answer) {
                     return true;
-                }  else {
+                } else {
                     return false;
-
                 }
-            }
+            };
 
             let clue = document.getElementById("clue_div");
             clue.style.display = "none";
@@ -49,20 +48,13 @@
 
             let s = "";
             s = prompt("please enter the password");
-            while(!checkPassword(s)){
-                 s = prompt("please enter the password");
+            while (!checkPassword(s)) {
+                s = prompt("please enter the password");
             }
-            if (checkPassword(s)){
+            if (checkPassword(s)) {
                 clue.style.display = "block";
                 hidden_div.style.display = "none";
             }
-            {% comment %} s = s? s.toLowerCase() : "";
-            if(s == "fan"){
-                clue.style.display = "block";
-                hidden_div.style.display = "none";
-            }else {
-
-            } {% endcomment %}
         </script>
     </body>
 </html>
