@@ -32,18 +32,35 @@
         </div>
 
         <script>
+            const checkPassword = (password) => {
+                let pw = password ? password.toLowerCase() : "";
+                if (pw == answer) {
+                    return true;
+                } else {
+                    return false;
+                }
+            };
+
+            const revealClue = () => {
+                clue.style.display = "block";
+                hidden_div.style.display = "none";
+            };
+
+            // Set Answer
+            const answer = "oculus";
+
+            // Hide clue until correct password
             let clue = document.getElementById("clue_div");
             clue.style.display = "none";
             let hidden_div = document.getElementById("clue_hidden");
 
             let s = "";
             s = prompt("please enter the password");
-            s = s ? s.toLowerCase() : "";
-            if (s == "oculus") {
-                clue.style.display = "block";
-                hidden_div.style.display = "none";
-            } else {
-                alert("Incorrect password-try again");
+            while (!checkPassword(s)) {
+                s = prompt("Try again. Please enter the password");
+            }
+            if (checkPassword(s)) {
+                revealClue();
             }
         </script>
     </body>

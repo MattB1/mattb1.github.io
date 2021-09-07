@@ -5,43 +5,60 @@
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>Alex</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="" />
     </head>
     <body>
         <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+            <p class="browsehappy">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="#">upgrade your browser</a> to improve your experience.
+            </p>
         <![endif]-->
         <h1>Alex Birthday Hunt</h1>
         <p>Clue:</p>
         <div id="clue_div">
-            <h2 id="clue_text">Tickle me, Play me, Sing with me. </h2>
+            <h2 id="clue_text">Tickle me, Play me, Sing with me.</h2>
         </div>
         <div id="clue_hidden">
-            <p style="color: red;">clue hidden</p>
+            <p style="color: red">clue hidden</p>
         </div>
-       
-   
-        <script>
 
-        let clue = document.getElementById("clue_div");
-        clue.style.display = "none";
-        let hidden_div = document.getElementById("clue_hidden");
-        
-        let s = "";
-        s = prompt("please enter the password");
-         s = s? s.toLowerCase() : "";      
-        if(s == "mouse"){
-            clue.style.display = "block";
-            hidden_div.style.display = "none";
-        }else {
-            alert('Incorrect password-try again');
-        }
-        
+        <script>
+            const checkPassword = (password) => {
+                let pw = password ? password.toLowerCase() : "";
+                if (pw == answer) {
+                    return true;
+                } else {
+                    return false;
+                }
+            };
+
+            const revealClue = () => {
+                clue.style.display = "block";
+                hidden_div.style.display = "none";
+            };
+
+            // Set Answer
+            const answer = "mouse";
+
+            // Hide clue until correct password
+            let clue = document.getElementById("clue_div");
+            clue.style.display = "none";
+            let hidden_div = document.getElementById("clue_hidden");
+
+            let s = "";
+            s = prompt("please enter the password");
+            while (!checkPassword(s)) {
+                s = prompt("Try again. Please enter the password");
+            }
+            if (checkPassword(s)) {
+                revealClue();
+            }
         </script>
     </body>
 </html>

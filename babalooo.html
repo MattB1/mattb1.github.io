@@ -31,8 +31,6 @@
         </div>
 
         <script>
-            const answer = "fan";
-
             const checkPassword = (password) => {
                 let pw = password ? password.toLowerCase() : "";
                 if (pw == answer) {
@@ -42,6 +40,15 @@
                 }
             };
 
+            const revealClue = () => {
+                clue.style.display = "block";
+                hidden_div.style.display = "none";
+            };
+
+            // Set Answer
+            const answer = "fan";
+
+            // Hide clue until correct password
             let clue = document.getElementById("clue_div");
             clue.style.display = "none";
             let hidden_div = document.getElementById("clue_hidden");
@@ -49,11 +56,10 @@
             let s = "";
             s = prompt("please enter the password");
             while (!checkPassword(s)) {
-                s = prompt("please enter the password");
+                s = prompt("Try again. Please enter the password");
             }
             if (checkPassword(s)) {
-                clue.style.display = "block";
-                hidden_div.style.display = "none";
+                revealClue();
             }
         </script>
     </body>
