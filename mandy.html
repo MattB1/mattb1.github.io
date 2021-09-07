@@ -22,7 +22,10 @@
         <h1>Alex Birthday Hunt</h1>
         <p>Clue:</p>
         <div id="clue_div">
-            <h2 id="clue_text">I have 13 hearts, but no other organs.</h2>
+            <h2 id="clue_text">
+                This is the final thing that you must guess, it comes once a
+                week and it's alway fresh.
+            </h2>
         </div>
         <div id="clue_hidden">
             <p style="color: red">clue hidden</p>
@@ -36,7 +39,7 @@
             let s = "";
             s = prompt("please enter the password");
             s = s ? s.toLowerCase() : "";
-            if (s == "passport") {
+            if (s == "cards") {
                 clue.style.display = "block";
                 hidden_div.style.display = "none";
             } else {
