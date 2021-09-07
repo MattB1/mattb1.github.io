@@ -1,6 +1,7 @@
 # README
 
 ## Desc
+
 Site pages are in alphabetical order to keep track but random names.
 
 ## Clue list
@@ -14,4 +15,7 @@ Site pages are in alphabetical order to keep track but random names.
 7. candle
 8. cocktail
 9. oculus
-10.
+10. keyboard
+11. passport
+12. cards
+13. Hello fresh box (with presents inside)
